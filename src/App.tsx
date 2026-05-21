@@ -7,6 +7,7 @@ import MainLayout from './layouts/MainLayout'
 import PruebaPage from './pages/PruebaPage'
 import SidebarMenu from './components/SidebarMenu'
 import TicketPage from "./pages/TicketPage";
+import CreateTicketPage from './pages/CreateTicketPage'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -22,6 +23,10 @@ function App() {
       name: "tickets",
       content: "Tickets"
     },
+    {
+      name: "crear",
+      content: "Crear"
+    },
   ])
 
   function renderContent() {
@@ -30,6 +35,8 @@ function App() {
         return <PruebaPage />
       case "tickets":
         return <TicketPage />
+      case "crear":
+        return <CreateTicketPage />
       default:
         return <PruebaPage />
     }

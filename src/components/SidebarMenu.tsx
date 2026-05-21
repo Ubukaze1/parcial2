@@ -23,6 +23,13 @@ export default function SidebarMenu({ current, onChange }: Props) {
                 >
                     Tickets
                 </button>
+                <button
+                    className={`text-left p-2 rounded ${current === "customers"
+                        ? "bg-black text-white" : "hover:bg-gray-100"}`}
+                    onClick={() => onChange("crear")}
+                >
+                    Crear Tickets
+                </button>
             </nav>
         </div>
     )
